@@ -36,6 +36,7 @@ namespace ExampleWebApp
         {
             app.UseDeveloperExceptionPage();
             app.UseRouting();
+            app.UseMiddleware<TestMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {
