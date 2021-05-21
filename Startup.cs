@@ -30,6 +30,8 @@ namespace ExampleWebApp
                     "ConnectionStrings:ProductConnection"]);
                 opts.EnableSensitiveDataLogging(true);
             });
+
+            services.AddControllers();
         }
 
         public void Configure(IApplicationBuilder app, DataContext context)
@@ -44,6 +46,8 @@ namespace ExampleWebApp
                 {
                     await context.Response.WriteAsync("Hello World!");
                 });
+                //endpoints.MapWebService();
+                endpoints.MapControllers();
             });
 
             SeedData.SeedDatabase(context);
