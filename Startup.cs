@@ -32,11 +32,18 @@ namespace ExampleWebApp
                 opts.EnableSensitiveDataLogging(true);
             });
 
-            services.AddControllers();
-            services.Configure<JsonOptions>(opts =>
+            services.AddControllers().AddNewtonsoftJson();
+
+            services.Configure<MvcNewtonsoftJsonOptions>(opts =>
             {
-                opts.JsonSerializerOptions.IgnoreNullValues = true
+                opts.SerializerSettings.NullValueHandling
+                    = Newtonsoft.Json.NullValueHandling.Ignore;
             });
+
+            //services.Configure<JsonOptions>(opts =>
+            //{
+            //    opts.JsonSerializerOptions.IgnoreNullValues = true;
+            //});
         }
 
         public void Configure(IApplicationBuilder app, DataContext context)

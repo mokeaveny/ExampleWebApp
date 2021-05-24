@@ -52,3 +52,7 @@ C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\bin\Debu
 C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\obj\Debug\netcoreapp3.1\ExampleWebApp.csproj.CopyComplete
 C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\bin\Debug\netcoreapp3.1\libman.json
+C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
