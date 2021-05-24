@@ -10,6 +10,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using ExampleWebApp.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ExampleWebApp
 {
@@ -32,6 +33,10 @@ namespace ExampleWebApp
             });
 
             services.AddControllers();
+            services.Configure<JsonOptions>(opts =>
+            {
+                opts.JsonSerializerOptions.IgnoreNullValues = true
+            });
         }
 
         public void Configure(IApplicationBuilder app, DataContext context)

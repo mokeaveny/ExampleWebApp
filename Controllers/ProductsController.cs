@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 namespace ExampleWebApp.Controllers
 {
     // Route is api/products
+    [ApiController]
     [Route("api/[controller]")]
     public class ProductsController : ControllerBase
     {
@@ -33,7 +34,12 @@ namespace ExampleWebApp.Controllers
             {
                 return NotFound();
             }
-            return Ok(p);
+            return Ok(new
+            {
+                ProductId = p.ProductId, Name = p.Name,
+                Price = p.Price, CategoryId = p.CategoryId,
+                SupplierId = p.SupplierId
+            });
         }
 
         [HttpGet("redirect")]
@@ -43,8 +49,7 @@ namespace ExampleWebApp.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult>
-            SaveProduct([FromBody]ProductBindingTarget target)
+        public async Task<IActionResult> SaveProduct(ProductBindingTarget target)
         {
             Product p = target.ToProduct();
             await context.Products.AddAsync(p);
@@ -53,7 +58,7 @@ namespace ExampleWebApp.Controllers
         }
 
         [HttpPut]
-        public async Task UpdateProduct([FromBody]Product product)
+        public async Task UpdateProduct(Product product)
         {
             context.Update(product);
             await context.SaveChangesAsync();
