@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using ExampleWebApp.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.OpenApi.Models;
 
 namespace ExampleWebApp
 {
@@ -46,10 +47,11 @@ namespace ExampleWebApp
                 opts.ReturnHttpNotAcceptable = true;
             });
 
-            //services.Configure<JsonOptions>(opts =>
-            //{
-            //    opts.JsonSerializerOptions.IgnoreNullValues = true;
-            //});
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1",
+                    new OpenApiInfo { Title = "WebApp", Version = "v1" });
+            });
         }
 
         public void Configure(IApplicationBuilder app, DataContext context)
@@ -66,6 +68,11 @@ namespace ExampleWebApp
                 });
                 //endpoints.MapWebService();
                 endpoints.MapControllers();
+            });
+            app.UseSwagger();
+            app.UseSwaggerUI(options =>
+            {
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "WebApp");
             });
 
             SeedData.SeedDatabase(context);
