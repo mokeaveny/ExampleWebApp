@@ -20,7 +20,7 @@ using ExampleWebApp.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5ecce9299c30525248c0f8dda864a9c1600e2fc0", @"/Views/Home/Watersports.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"502ede80db7182734fdd26e7e281137aed742185", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a2f9e4fb976e3224a8a0cdf0b64ca982ae9bd13c", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Watersports : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Product>
     {
         #line hidden
