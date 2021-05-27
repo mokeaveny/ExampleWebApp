@@ -380,3 +380,6 @@ C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\obj\Debu
 C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Common.cshtml.g.cs
 C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\List.cshtml.g.cs
+C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Cubed.cshtml.g.cs
+C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
