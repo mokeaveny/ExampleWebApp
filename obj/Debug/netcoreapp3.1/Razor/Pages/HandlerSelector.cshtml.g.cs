@@ -34,7 +34,7 @@ using Microsoft.EntityFrameworkCore;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"61994239e671600334b53ff643b3f050525c2201", @"/Pages/HandlerSelector.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0d3faca6a5b49ee199f2a5ffa75bd476c9e8166d", @"/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a6ea1ba4141d4ad19aca8fa8706e3e0f0456ed58", @"/Pages/_ViewImports.cshtml")]
     public class Pages_HandlerSelector : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
         #line hidden

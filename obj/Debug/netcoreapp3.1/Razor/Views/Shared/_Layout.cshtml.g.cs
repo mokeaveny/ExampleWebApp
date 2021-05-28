@@ -19,8 +19,15 @@ using ExampleWebApp.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\Views\_ViewImports.cshtml"
+using ExampleWebApp.Components;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"830cb8a670978bb078fd57c60f703e51ae27763e", @"/Views/Shared/_Layout.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a2f9e4fb976e3224a8a0cdf0b64ca982ae9bd13c", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"56c278216e8058853846ef6205ec079e83f3be89", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__Layout : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #line hidden
@@ -49,7 +56,7 @@ using ExampleWebApp.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<!DOCTYPE html>\r\n<html>\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "830cb8a670978bb078fd57c60f703e51ae27763e3114", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "830cb8a670978bb078fd57c60f703e51ae27763e3325", async() => {
                 WriteLiteral("\r\n    <title>");
 #nullable restore
 #line 4 "C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\Views\Shared\_Layout.cshtml"
@@ -71,7 +78,7 @@ using ExampleWebApp.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "830cb8a670978bb078fd57c60f703e51ae27763e4436", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "830cb8a670978bb078fd57c60f703e51ae27763e4647", async() => {
                 WriteLiteral("\r\n    <div class=\"m-2\">\r\n        <table class=\"table table-sm table-striped table-bordered\">\r\n            <thead>\r\n                <tr>\r\n                    <th class=\"bg-primary text-white text-center\" colspan=\"2\">\r\n                        ");
 #nullable restore
 #line 13 "C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\Views\Shared\_Layout.cshtml"
