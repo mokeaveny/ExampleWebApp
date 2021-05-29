@@ -28,7 +28,7 @@ using ExampleWebApp.Models;
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorCompiledItemMetadataAttribute("RouteTemplate", "/lists/suppliers")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b653dc0261ebd33c222969c2a7839c825609b732", @"/Pages/Suppliers/List.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a6ea1ba4141d4ad19aca8fa8706e3e0f0456ed58", @"/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c99a9098832cd4193a2678bdd569b861948b350a", @"/Pages/_ViewImports.cshtml")]
     public class Pages_Suppliers_List : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
         #line hidden

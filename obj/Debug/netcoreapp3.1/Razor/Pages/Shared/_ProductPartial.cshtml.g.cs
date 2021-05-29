@@ -20,7 +20,7 @@ using ExampleWebApp.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f6f1178c4aabbbac394b15f6f6b2a54c1dafe86d", @"/Pages/Shared/_ProductPartial.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a6ea1ba4141d4ad19aca8fa8706e3e0f0456ed58", @"/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c99a9098832cd4193a2678bdd569b861948b350a", @"/Pages/_ViewImports.cshtml")]
     public class Pages_Shared__ProductPartial : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Product>
     {
         #pragma warning disable 1998
