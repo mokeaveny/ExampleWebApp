@@ -401,3 +401,5 @@ C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\obj\Debu
 C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\CitySummary\Default.cshtml.g.cs
 C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\PageSize\Default.cshtml.g.cs
 C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\Components\CitiesPageHybrid\Default.cshtml.g.cs
+C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Cities\Index.cshtml.g.cs
+C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\CitiesControllerHybrid\Default.cshtml.g.cs
