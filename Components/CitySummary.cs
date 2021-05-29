@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using ExampleWebApp.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ViewComponents;
+using Microsoft.AspNetCore.Html;
 
 namespace ExampleWebApp.Components
 {
@@ -16,10 +18,10 @@ namespace ExampleWebApp.Components
             data = cdata;
         }
 
-        public string Invoke()
+        public IViewComponentResult Invoke()
         {
-            return $"{data.Cities.Count()} cities, " +
-                $"{data.Cities.Sum(c => c.Population)} people";
+            return new HtmlContentViewComponentResult(
+                new HtmlString("This is a <h3><i>string</i></h3>"));
         }
     }
 }

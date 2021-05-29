@@ -27,7 +27,7 @@ using ExampleWebApp.Components;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5ecce9299c30525248c0f8dda864a9c1600e2fc0", @"/Views/Home/Watersports.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"56c278216e8058853846ef6205ec079e83f3be89", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"66f89e70b9d119945d5e553d8729309407b82c94", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Watersports : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Product>
     {
         #line hidden

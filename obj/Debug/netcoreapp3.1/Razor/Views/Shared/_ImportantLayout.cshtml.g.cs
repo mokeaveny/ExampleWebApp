@@ -27,7 +27,7 @@ using ExampleWebApp.Components;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8cc6c8c625d09cb2c8380fc784be9e6cf2c7c60b", @"/Views/Shared/_ImportantLayout.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"56c278216e8058853846ef6205ec079e83f3be89", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"66f89e70b9d119945d5e553d8729309407b82c94", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__ImportantLayout : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #line hidden
