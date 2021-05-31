@@ -23,6 +23,7 @@ using ExampleWebApp.Models;
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c99a9098832cd4193a2678bdd569b861948b350a", @"/Pages/_ViewImports.cshtml")]
     public class Pages_Cities : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
+        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("table table-sm table-striped table-bordered"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         #line hidden
         #pragma warning disable 0649
         private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext __tagHelperExecutionContext;
@@ -43,11 +44,14 @@ using ExampleWebApp.Models;
                 return __backed__tagHelperScopeManager;
             }
         }
+        private global::ExampleWebApp.TagHelpers.TableFooterSelector __ExampleWebApp_TagHelpers_TableFooterSelector;
         private global::ExampleWebApp.TagHelpers.CellTagHelper __ExampleWebApp_TagHelpers_CellTagHelper;
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
-            WriteLiteral("\r\n<div class=\"m-2\">\r\n    <table class=\"table table-sm table-striped table-bordered\">\r\n        <tbody>\r\n");
+            WriteLiteral("\r\n<div class=\"m-2\">\r\n    ");
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("table", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f79fdfab0be6ccf8a433ed6f362768a9f0be63f83418", async() => {
+                WriteLiteral("\r\n        <tbody>\r\n");
 #nullable restore
 #line 7 "C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\Pages\Cities.cshtml"
              foreach (City c in Model.Data.Cities)
@@ -56,8 +60,8 @@ using ExampleWebApp.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("                <tr>\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("td", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f79fdfab0be6ccf8a433ed6f362768a9f0be63f83315", async() => {
+                WriteLiteral("                <tr>\r\n                    ");
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("td", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f79fdfab0be6ccf8a433ed6f362768a9f0be63f84014", async() => {
 #nullable restore
 #line 10 "C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\Pages\Cities.cshtml"
                    Write(c.Name);
@@ -65,19 +69,19 @@ using ExampleWebApp.Models;
 #line default
 #line hidden
 #nullable disable
-            }
-            );
-            __ExampleWebApp_TagHelpers_CellTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.CellTagHelper>();
-            __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_CellTagHelper);
-            await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
-            if (!__tagHelperExecutionContext.Output.IsContentModified)
-            {
-                await __tagHelperExecutionContext.SetOutputContentAsync();
-            }
-            Write(__tagHelperExecutionContext.Output);
-            __tagHelperExecutionContext = __tagHelperScopeManager.End();
-            WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("td", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f79fdfab0be6ccf8a433ed6f362768a9f0be63f84417", async() => {
+                }
+                );
+                __ExampleWebApp_TagHelpers_CellTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.CellTagHelper>();
+                __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_CellTagHelper);
+                await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                if (!__tagHelperExecutionContext.Output.IsContentModified)
+                {
+                    await __tagHelperExecutionContext.SetOutputContentAsync();
+                }
+                Write(__tagHelperExecutionContext.Output);
+                __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                WriteLiteral("\r\n                    ");
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("td", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f79fdfab0be6ccf8a433ed6f362768a9f0be63f85168", async() => {
 #nullable restore
 #line 11 "C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\Pages\Cities.cshtml"
                    Write(c.Country);
@@ -85,19 +89,19 @@ using ExampleWebApp.Models;
 #line default
 #line hidden
 #nullable disable
-            }
-            );
-            __ExampleWebApp_TagHelpers_CellTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.CellTagHelper>();
-            __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_CellTagHelper);
-            await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
-            if (!__tagHelperExecutionContext.Output.IsContentModified)
-            {
-                await __tagHelperExecutionContext.SetOutputContentAsync();
-            }
-            Write(__tagHelperExecutionContext.Output);
-            __tagHelperExecutionContext = __tagHelperScopeManager.End();
-            WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("td", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f79fdfab0be6ccf8a433ed6f362768a9f0be63f85522", async() => {
+                }
+                );
+                __ExampleWebApp_TagHelpers_CellTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.CellTagHelper>();
+                __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_CellTagHelper);
+                await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                if (!__tagHelperExecutionContext.Output.IsContentModified)
+                {
+                    await __tagHelperExecutionContext.SetOutputContentAsync();
+                }
+                Write(__tagHelperExecutionContext.Output);
+                __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                WriteLiteral("\r\n                    ");
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("td", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f79fdfab0be6ccf8a433ed6f362768a9f0be63f86325", async() => {
 #nullable restore
 #line 12 "C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\Pages\Cities.cshtml"
                    Write(c.Population);
@@ -105,18 +109,18 @@ using ExampleWebApp.Models;
 #line default
 #line hidden
 #nullable disable
-            }
-            );
-            __ExampleWebApp_TagHelpers_CellTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.CellTagHelper>();
-            __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_CellTagHelper);
-            await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
-            if (!__tagHelperExecutionContext.Output.IsContentModified)
-            {
-                await __tagHelperExecutionContext.SetOutputContentAsync();
-            }
-            Write(__tagHelperExecutionContext.Output);
-            __tagHelperExecutionContext = __tagHelperScopeManager.End();
-            WriteLiteral("\r\n                </tr>\r\n");
+                }
+                );
+                __ExampleWebApp_TagHelpers_CellTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.CellTagHelper>();
+                __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_CellTagHelper);
+                await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                if (!__tagHelperExecutionContext.Output.IsContentModified)
+                {
+                    await __tagHelperExecutionContext.SetOutputContentAsync();
+                }
+                Write(__tagHelperExecutionContext.Output);
+                __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                WriteLiteral("\r\n                </tr>\r\n");
 #nullable restore
 #line 14 "C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\Pages\Cities.cshtml"
             }
@@ -124,7 +128,20 @@ using ExampleWebApp.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("        </tbody>\r\n    </table>\r\n</div> ");
+                WriteLiteral("        </tbody>\r\n    ");
+            }
+            );
+            __ExampleWebApp_TagHelpers_TableFooterSelector = CreateTagHelper<global::ExampleWebApp.TagHelpers.TableFooterSelector>();
+            __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_TableFooterSelector);
+            __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_0);
+            await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+            if (!__tagHelperExecutionContext.Output.IsContentModified)
+            {
+                await __tagHelperExecutionContext.SetOutputContentAsync();
+            }
+            Write(__tagHelperExecutionContext.Output);
+            __tagHelperExecutionContext = __tagHelperScopeManager.End();
+            WriteLiteral("\r\n</div> ");
         }
         #pragma warning restore 1998
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]

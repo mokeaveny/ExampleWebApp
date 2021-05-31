@@ -34,6 +34,7 @@ using ExampleWebApp.Components;
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_1 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("theme", "primary", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_2 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("theme", "secondary", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_3 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("theme", "info", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_4 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("table table-striped table-bordered table-sm"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         #line hidden
         #pragma warning disable 0649
         private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext __tagHelperExecutionContext;
@@ -55,6 +56,7 @@ using ExampleWebApp.Components;
             }
         }
         private global::ExampleWebApp.TagHelpers.SelectiveTagHelper __ExampleWebApp_TagHelpers_SelectiveTagHelper;
+        private global::ExampleWebApp.TagHelpers.TableFooterSelector __ExampleWebApp_TagHelpers_TableFooterSelector;
         private global::ExampleWebApp.TagHelpers.TableHeadTagHelper __ExampleWebApp_TagHelpers_TableHeadTagHelper;
         private global::ExampleWebApp.TagHelpers.RowTagHelper __ExampleWebApp_TagHelpers_RowTagHelper;
         private global::ExampleWebApp.TagHelpers.CellTagHelper __ExampleWebApp_TagHelpers_CellTagHelper;
@@ -70,7 +72,7 @@ using ExampleWebApp.Components;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e94a0cee238a182a2c4680c73e7d05f7eddfe9c4841", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e94a0cee238a182a2c4680c73e7d05f7eddfe9c5342", async() => {
                 WriteLiteral("\r\n    <h5 class=\"bg-danger text-white text-center p-2\">\r\n        Warning: Expensive Item\r\n    </h5>\r\n");
             }
             );
@@ -99,31 +101,17 @@ __ExampleWebApp_TagHelpers_SelectiveTagHelper.For = ModelExpressionProvider.Crea
             }
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
-            WriteLiteral("\r\n\r\n<table class=\"table table-striped table-bordered table-sm\">\r\n    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("tablehead", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e94a0cee238a182a2c4680c73e7d05f7eddfe9c6931", async() => {
-                WriteLiteral("Product Summary");
-            }
-            );
-            __ExampleWebApp_TagHelpers_TableHeadTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.TableHeadTagHelper>();
-            __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_TableHeadTagHelper);
-            __ExampleWebApp_TagHelpers_TableHeadTagHelper.BgColor = (string)__tagHelperAttribute_0.Value;
-            __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_0);
-            await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
-            if (!__tagHelperExecutionContext.Output.IsContentModified)
-            {
-                await __tagHelperExecutionContext.SetOutputContentAsync();
-            }
-            Write(__tagHelperExecutionContext.Output);
-            __tagHelperExecutionContext = __tagHelperScopeManager.End();
-            WriteLiteral("\r\n    <tbody>\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("tr", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e94a0cee238a182a2c4680c73e7d05f7eddfe9c8095", async() => {
-                WriteLiteral("\r\n            ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("th", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e94a0cee238a182a2c4680c73e7d05f7eddfe9c8363", async() => {
-                    WriteLiteral("Name");
+            WriteLiteral("\r\n\r\n");
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("table", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e94a0cee238a182a2c4680c73e7d05f7eddfe9c7363", async() => {
+                WriteLiteral("\r\n    ");
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("tablehead", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e94a0cee238a182a2c4680c73e7d05f7eddfe9c7626", async() => {
+                    WriteLiteral("Product Summary");
                 }
                 );
-                __ExampleWebApp_TagHelpers_CellTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.CellTagHelper>();
-                __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_CellTagHelper);
+                __ExampleWebApp_TagHelpers_TableHeadTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.TableHeadTagHelper>();
+                __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_TableHeadTagHelper);
+                __ExampleWebApp_TagHelpers_TableHeadTagHelper.BgColor = (string)__tagHelperAttribute_0.Value;
+                __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_0);
                 await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
                 if (!__tagHelperExecutionContext.Output.IsContentModified)
                 {
@@ -131,7 +119,23 @@ __ExampleWebApp_TagHelpers_SelectiveTagHelper.For = ModelExpressionProvider.Crea
                 }
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("td", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e94a0cee238a182a2c4680c73e7d05f7eddfe9c9293", async() => {
+                WriteLiteral("\r\n    <tbody>\r\n        ");
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("tr", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e94a0cee238a182a2c4680c73e7d05f7eddfe9c8854", async() => {
+                    WriteLiteral("\r\n            ");
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("th", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e94a0cee238a182a2c4680c73e7d05f7eddfe9c9130", async() => {
+                        WriteLiteral("Name");
+                    }
+                    );
+                    __ExampleWebApp_TagHelpers_CellTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.CellTagHelper>();
+                    __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_CellTagHelper);
+                    await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                    if (!__tagHelperExecutionContext.Output.IsContentModified)
+                    {
+                        await __tagHelperExecutionContext.SetOutputContentAsync();
+                    }
+                    Write(__tagHelperExecutionContext.Output);
+                    __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("td", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e94a0cee238a182a2c4680c73e7d05f7eddfe9c10112", async() => {
 #nullable restore
 #line 16 "C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\Views\Home\Index.cshtml"
                         Write(Model.Name);
@@ -139,10 +143,24 @@ __ExampleWebApp_TagHelpers_SelectiveTagHelper.For = ModelExpressionProvider.Crea
 #line default
 #line hidden
 #nullable disable
+                    }
+                    );
+                    __ExampleWebApp_TagHelpers_CellTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.CellTagHelper>();
+                    __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_CellTagHelper);
+                    await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                    if (!__tagHelperExecutionContext.Output.IsContentModified)
+                    {
+                        await __tagHelperExecutionContext.SetOutputContentAsync();
+                    }
+                    Write(__tagHelperExecutionContext.Output);
+                    __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                    WriteLiteral("\r\n        ");
                 }
                 );
-                __ExampleWebApp_TagHelpers_CellTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.CellTagHelper>();
-                __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_CellTagHelper);
+                __ExampleWebApp_TagHelpers_RowTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.RowTagHelper>();
+                __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_RowTagHelper);
+                __ExampleWebApp_TagHelpers_RowTagHelper.Theme = (string)__tagHelperAttribute_1.Value;
+                __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_1);
                 await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
                 if (!__tagHelperExecutionContext.Output.IsContentModified)
                 {
@@ -151,36 +169,22 @@ __ExampleWebApp_TagHelpers_SelectiveTagHelper.For = ModelExpressionProvider.Crea
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n        ");
-            }
-            );
-            __ExampleWebApp_TagHelpers_RowTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.RowTagHelper>();
-            __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_RowTagHelper);
-            __ExampleWebApp_TagHelpers_RowTagHelper.Theme = (string)__tagHelperAttribute_1.Value;
-            __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_1);
-            await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
-            if (!__tagHelperExecutionContext.Output.IsContentModified)
-            {
-                await __tagHelperExecutionContext.SetOutputContentAsync();
-            }
-            Write(__tagHelperExecutionContext.Output);
-            __tagHelperExecutionContext = __tagHelperScopeManager.End();
-            WriteLiteral("\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("tr", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e94a0cee238a182a2c4680c73e7d05f7eddfe9c11297", async() => {
-                WriteLiteral("\r\n            ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("th", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e94a0cee238a182a2c4680c73e7d05f7eddfe9c11566", async() => {
-                    WriteLiteral("Price");
-                }
-                );
-                __ExampleWebApp_TagHelpers_CellTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.CellTagHelper>();
-                __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_CellTagHelper);
-                await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
-                if (!__tagHelperExecutionContext.Output.IsContentModified)
-                {
-                    await __tagHelperExecutionContext.SetOutputContentAsync();
-                }
-                Write(__tagHelperExecutionContext.Output);
-                __tagHelperExecutionContext = __tagHelperScopeManager.End();
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("td", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e94a0cee238a182a2c4680c73e7d05f7eddfe9c12498", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("tr", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e94a0cee238a182a2c4680c73e7d05f7eddfe9c12225", async() => {
+                    WriteLiteral("\r\n            ");
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("th", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e94a0cee238a182a2c4680c73e7d05f7eddfe9c12502", async() => {
+                        WriteLiteral("Price");
+                    }
+                    );
+                    __ExampleWebApp_TagHelpers_CellTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.CellTagHelper>();
+                    __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_CellTagHelper);
+                    await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                    if (!__tagHelperExecutionContext.Output.IsContentModified)
+                    {
+                        await __tagHelperExecutionContext.SetOutputContentAsync();
+                    }
+                    Write(__tagHelperExecutionContext.Output);
+                    __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("td", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e94a0cee238a182a2c4680c73e7d05f7eddfe9c13486", async() => {
 #nullable restore
 #line 19 "C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\Views\Home\Index.cshtml"
                          Write(Model.Price.ToString("c"));
@@ -188,10 +192,24 @@ __ExampleWebApp_TagHelpers_SelectiveTagHelper.For = ModelExpressionProvider.Crea
 #line default
 #line hidden
 #nullable disable
+                    }
+                    );
+                    __ExampleWebApp_TagHelpers_CellTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.CellTagHelper>();
+                    __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_CellTagHelper);
+                    await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                    if (!__tagHelperExecutionContext.Output.IsContentModified)
+                    {
+                        await __tagHelperExecutionContext.SetOutputContentAsync();
+                    }
+                    Write(__tagHelperExecutionContext.Output);
+                    __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                    WriteLiteral("\r\n        ");
                 }
                 );
-                __ExampleWebApp_TagHelpers_CellTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.CellTagHelper>();
-                __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_CellTagHelper);
+                __ExampleWebApp_TagHelpers_RowTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.RowTagHelper>();
+                __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_RowTagHelper);
+                __ExampleWebApp_TagHelpers_RowTagHelper.Theme = (string)__tagHelperAttribute_2.Value;
+                __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_2);
                 await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
                 if (!__tagHelperExecutionContext.Output.IsContentModified)
                 {
@@ -200,36 +218,22 @@ __ExampleWebApp_TagHelpers_SelectiveTagHelper.For = ModelExpressionProvider.Crea
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n        ");
-            }
-            );
-            __ExampleWebApp_TagHelpers_RowTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.RowTagHelper>();
-            __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_RowTagHelper);
-            __ExampleWebApp_TagHelpers_RowTagHelper.Theme = (string)__tagHelperAttribute_2.Value;
-            __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_2);
-            await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
-            if (!__tagHelperExecutionContext.Output.IsContentModified)
-            {
-                await __tagHelperExecutionContext.SetOutputContentAsync();
-            }
-            Write(__tagHelperExecutionContext.Output);
-            __tagHelperExecutionContext = __tagHelperScopeManager.End();
-            WriteLiteral("\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("tr", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e94a0cee238a182a2c4680c73e7d05f7eddfe9c14519", async() => {
-                WriteLiteral("\r\n            ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("th", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e94a0cee238a182a2c4680c73e7d05f7eddfe9c14788", async() => {
-                    WriteLiteral("Category");
-                }
-                );
-                __ExampleWebApp_TagHelpers_CellTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.CellTagHelper>();
-                __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_CellTagHelper);
-                await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
-                if (!__tagHelperExecutionContext.Output.IsContentModified)
-                {
-                    await __tagHelperExecutionContext.SetOutputContentAsync();
-                }
-                Write(__tagHelperExecutionContext.Output);
-                __tagHelperExecutionContext = __tagHelperScopeManager.End();
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("td", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e94a0cee238a182a2c4680c73e7d05f7eddfe9c15723", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("tr", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e94a0cee238a182a2c4680c73e7d05f7eddfe9c15615", async() => {
+                    WriteLiteral("\r\n            ");
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("th", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e94a0cee238a182a2c4680c73e7d05f7eddfe9c15892", async() => {
+                        WriteLiteral("Category");
+                    }
+                    );
+                    __ExampleWebApp_TagHelpers_CellTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.CellTagHelper>();
+                    __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_CellTagHelper);
+                    await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                    if (!__tagHelperExecutionContext.Output.IsContentModified)
+                    {
+                        await __tagHelperExecutionContext.SetOutputContentAsync();
+                    }
+                    Write(__tagHelperExecutionContext.Output);
+                    __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("td", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e94a0cee238a182a2c4680c73e7d05f7eddfe9c16879", async() => {
 #nullable restore
 #line 22 "C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\Views\Home\Index.cshtml"
                             Write(Model.CategoryId);
@@ -237,10 +241,24 @@ __ExampleWebApp_TagHelpers_SelectiveTagHelper.For = ModelExpressionProvider.Crea
 #line default
 #line hidden
 #nullable disable
+                    }
+                    );
+                    __ExampleWebApp_TagHelpers_CellTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.CellTagHelper>();
+                    __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_CellTagHelper);
+                    await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                    if (!__tagHelperExecutionContext.Output.IsContentModified)
+                    {
+                        await __tagHelperExecutionContext.SetOutputContentAsync();
+                    }
+                    Write(__tagHelperExecutionContext.Output);
+                    __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                    WriteLiteral("\r\n        ");
                 }
                 );
-                __ExampleWebApp_TagHelpers_CellTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.CellTagHelper>();
-                __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_CellTagHelper);
+                __ExampleWebApp_TagHelpers_RowTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.RowTagHelper>();
+                __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_RowTagHelper);
+                __ExampleWebApp_TagHelpers_RowTagHelper.Theme = (string)__tagHelperAttribute_3.Value;
+                __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_3);
                 await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
                 if (!__tagHelperExecutionContext.Output.IsContentModified)
                 {
@@ -248,13 +266,12 @@ __ExampleWebApp_TagHelpers_SelectiveTagHelper.For = ModelExpressionProvider.Crea
                 }
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
-                WriteLiteral("\r\n        ");
+                WriteLiteral("\r\n    </tbody>\r\n");
             }
             );
-            __ExampleWebApp_TagHelpers_RowTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.RowTagHelper>();
-            __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_RowTagHelper);
-            __ExampleWebApp_TagHelpers_RowTagHelper.Theme = (string)__tagHelperAttribute_3.Value;
-            __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_3);
+            __ExampleWebApp_TagHelpers_TableFooterSelector = CreateTagHelper<global::ExampleWebApp.TagHelpers.TableFooterSelector>();
+            __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_TableFooterSelector);
+            __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_4);
             await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
             if (!__tagHelperExecutionContext.Output.IsContentModified)
             {
@@ -262,7 +279,6 @@ __ExampleWebApp_TagHelpers_SelectiveTagHelper.For = ModelExpressionProvider.Crea
             }
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
-            WriteLiteral("\r\n    </tbody>\r\n</table>");
         }
         #pragma warning restore 1998
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]

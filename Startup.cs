@@ -3,6 +3,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using ExampleWebApp.Models;
+using Microsoft.AspNetCore.Razor.TagHelpers;
+using ExampleWebApp.TagHelpers;
 
 namespace ExampleWebApp
 {
@@ -26,6 +28,8 @@ namespace ExampleWebApp
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddRazorPages().AddRazorRuntimeCompilation();
             services.AddSingleton<CitiesData>();
+            services.AddTransient<ITagHelperComponent, TimeTagHelperComponent>();
+            services.AddTransient<ITagHelperComponent, TableFooterTagHelperComponent>();
         }
 
         public void Configure(IApplicationBuilder app, DataContext context)

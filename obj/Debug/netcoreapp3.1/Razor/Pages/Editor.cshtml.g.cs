@@ -25,7 +25,8 @@ using ExampleWebApp.Models;
     public class Pages_Editor : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("format", "c", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
-        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_1 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("method", "post", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_1 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("table table-sm table-striped table-bordered"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_2 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("method", "post", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         #line hidden
         #pragma warning disable 0649
         private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext __tagHelperExecutionContext;
@@ -48,6 +49,7 @@ using ExampleWebApp.Models;
         }
         private global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.HeadTagHelper __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_HeadTagHelper;
         private global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.BodyTagHelper __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_BodyTagHelper;
+        private global::ExampleWebApp.TagHelpers.TableFooterSelector __ExampleWebApp_TagHelpers_TableFooterSelector;
         private global::ExampleWebApp.TagHelpers.ModelRowTagHelper __ExampleWebApp_TagHelpers_ModelRowTagHelper;
         private global::Microsoft.AspNetCore.Mvc.TagHelpers.FormTagHelper __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper;
         private global::Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper __Microsoft_AspNetCore_Mvc_TagHelpers_RenderAtEndOfFormTagHelper;
@@ -63,7 +65,7 @@ using ExampleWebApp.Models;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n<!DOCTYPE html>\r\n<html>\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fc7a6680889abd20cf908e94a54efe6992431d0d4388", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fc7a6680889abd20cf908e94a54efe6992431d0d4889", async() => {
                 WriteLiteral("\r\n    <link href=\"/lib/twitter-bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\" />\r\n");
             }
             );
@@ -77,13 +79,15 @@ using ExampleWebApp.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fc7a6680889abd20cf908e94a54efe6992431d0d5443", async() => {
-                WriteLiteral("\r\n    <div class=\"bg-primary text-white text-center m-2 p-2\">Editor</div>\r\n    <div class=\"m-2\">\r\n        <table class=\"table table-sm table-striped table-bordered\">\r\n            <tbody>\r\n                ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("tr", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "fc7a6680889abd20cf908e94a54efe6992431d0d5917", async() => {
-                }
-                );
-                __ExampleWebApp_TagHelpers_ModelRowTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.ModelRowTagHelper>();
-                __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_ModelRowTagHelper);
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fc7a6680889abd20cf908e94a54efe6992431d0d5944", async() => {
+                WriteLiteral("\r\n    <div class=\"bg-primary text-white text-center m-2 p-2\">Editor</div>\r\n    <div class=\"m-2\">\r\n        ");
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("table", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fc7a6680889abd20cf908e94a54efe6992431d0d6314", async() => {
+                    WriteLiteral("\r\n            <tbody>\r\n                ");
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("tr", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "fc7a6680889abd20cf908e94a54efe6992431d0d6620", async() => {
+                    }
+                    );
+                    __ExampleWebApp_TagHelpers_ModelRowTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.ModelRowTagHelper>();
+                    __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_ModelRowTagHelper);
 #nullable restore
 #line 17 "C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\Pages\Editor.cshtml"
 __ExampleWebApp_TagHelpers_ModelRowTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.Product.Name);
@@ -91,20 +95,20 @@ __ExampleWebApp_TagHelpers_ModelRowTagHelper.For = ModelExpressionProvider.Creat
 #line default
 #line hidden
 #nullable disable
-                __tagHelperExecutionContext.AddTagHelperAttribute("for", __ExampleWebApp_TagHelpers_ModelRowTagHelper.For, global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
-                await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
-                if (!__tagHelperExecutionContext.Output.IsContentModified)
-                {
-                    await __tagHelperExecutionContext.SetOutputContentAsync();
-                }
-                Write(__tagHelperExecutionContext.Output);
-                __tagHelperExecutionContext = __tagHelperScopeManager.End();
-                WriteLiteral("\r\n                ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("tr", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "fc7a6680889abd20cf908e94a54efe6992431d0d7389", async() => {
-                }
-                );
-                __ExampleWebApp_TagHelpers_ModelRowTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.ModelRowTagHelper>();
-                __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_ModelRowTagHelper);
+                    __tagHelperExecutionContext.AddTagHelperAttribute("for", __ExampleWebApp_TagHelpers_ModelRowTagHelper.For, global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+                    await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                    if (!__tagHelperExecutionContext.Output.IsContentModified)
+                    {
+                        await __tagHelperExecutionContext.SetOutputContentAsync();
+                    }
+                    Write(__tagHelperExecutionContext.Output);
+                    __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                    WriteLiteral("\r\n                ");
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("tr", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "fc7a6680889abd20cf908e94a54efe6992431d0d8148", async() => {
+                    }
+                    );
+                    __ExampleWebApp_TagHelpers_ModelRowTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.ModelRowTagHelper>();
+                    __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_ModelRowTagHelper);
 #nullable restore
 #line 18 "C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\Pages\Editor.cshtml"
 __ExampleWebApp_TagHelpers_ModelRowTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.Product.Price);
@@ -112,9 +116,22 @@ __ExampleWebApp_TagHelpers_ModelRowTagHelper.For = ModelExpressionProvider.Creat
 #line default
 #line hidden
 #nullable disable
-                __tagHelperExecutionContext.AddTagHelperAttribute("for", __ExampleWebApp_TagHelpers_ModelRowTagHelper.For, global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
-                __ExampleWebApp_TagHelpers_ModelRowTagHelper.Format = (string)__tagHelperAttribute_0.Value;
-                __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_0);
+                    __tagHelperExecutionContext.AddTagHelperAttribute("for", __ExampleWebApp_TagHelpers_ModelRowTagHelper.For, global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+                    __ExampleWebApp_TagHelpers_ModelRowTagHelper.Format = (string)__tagHelperAttribute_0.Value;
+                    __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_0);
+                    await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                    if (!__tagHelperExecutionContext.Output.IsContentModified)
+                    {
+                        await __tagHelperExecutionContext.SetOutputContentAsync();
+                    }
+                    Write(__tagHelperExecutionContext.Output);
+                    __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                    WriteLiteral("\r\n            </tbody>\r\n        ");
+                }
+                );
+                __ExampleWebApp_TagHelpers_TableFooterSelector = CreateTagHelper<global::ExampleWebApp.TagHelpers.TableFooterSelector>();
+                __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_TableFooterSelector);
+                __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_1);
                 await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
                 if (!__tagHelperExecutionContext.Output.IsContentModified)
                 {
@@ -122,8 +139,8 @@ __ExampleWebApp_TagHelpers_ModelRowTagHelper.For = ModelExpressionProvider.Creat
                 }
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
-                WriteLiteral("\r\n            </tbody>\r\n        </table>\r\n        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fc7a6680889abd20cf908e94a54efe6992431d0d9099", async() => {
+                WriteLiteral("\r\n        ");
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fc7a6680889abd20cf908e94a54efe6992431d0d10720", async() => {
                     WriteLiteral("\r\n            ");
 #nullable restore
 #line 22 "C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\Pages\Editor.cshtml"
@@ -149,8 +166,8 @@ WriteAttributeValue("", 758, Model.Product.Price, 758, 20, false);
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper);
                 __Microsoft_AspNetCore_Mvc_TagHelpers_RenderAtEndOfFormTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper>();
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_RenderAtEndOfFormTagHelper);
-                __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper.Method = (string)__tagHelperAttribute_1.Value;
-                __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_1);
+                __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper.Method = (string)__tagHelperAttribute_2.Value;
+                __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_2);
                 await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
                 if (!__tagHelperExecutionContext.Output.IsContentModified)
                 {
