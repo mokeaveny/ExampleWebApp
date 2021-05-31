@@ -27,7 +27,7 @@ using ExampleWebApp.Components;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4b1f7a0970fe9bd4b386ec21ec62c78c50bcc3ba", @"/Views/Home/Html.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"66f89e70b9d119945d5e553d8729309407b82c94", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8c96481a4dbfd7440afa72b846a2b9afa4ce18d5", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Html : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<string>
     {
         #line hidden
