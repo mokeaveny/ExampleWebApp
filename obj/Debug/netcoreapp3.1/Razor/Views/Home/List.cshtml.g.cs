@@ -53,6 +53,7 @@ using ExampleWebApp.Components;
         }
         private global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.HeadTagHelper __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_HeadTagHelper;
         private global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.BodyTagHelper __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_BodyTagHelper;
+        private global::ExampleWebApp.TagHelpers.CellTagHelper __ExampleWebApp_TagHelpers_CellTagHelper;
         private global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper;
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
@@ -66,7 +67,7 @@ using ExampleWebApp.Components;
 #line hidden
 #nullable disable
             WriteLiteral("<!DOCTYPE html>\r\n<html>\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "41172715194b0efca59feec8e13f4e719b1f0ae33947", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "41172715194b0efca59feec8e13f4e719b1f0ae34053", async() => {
                 WriteLiteral("\r\n    <link href=\"/lib/twitter-bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\" />\r\n");
             }
             );
@@ -80,16 +81,35 @@ using ExampleWebApp.Components;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "41172715194b0efca59feec8e13f4e719b1f0ae35002", async() => {
-                WriteLiteral(@"
-    <h6 class=""bg-secondary text-white text-center m-2 p-2"">Products</h6>
-    <div class=""m-2"">
-        <table class=""table table-sm table-striped table-bordered"">
-            <thead>
-                <tr><th>Name</th><th>Price</th></tr>
-            </thead>
-            <tbody>
-");
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "41172715194b0efca59feec8e13f4e719b1f0ae35108", async() => {
+                WriteLiteral("\r\n    <h6 class=\"bg-secondary text-white text-center m-2 p-2\">Products</h6>\r\n    <div class=\"m-2\">\r\n        <table class=\"table table-sm table-striped table-bordered\">\r\n            <thead>\r\n                <tr>");
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("th", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "41172715194b0efca59feec8e13f4e719b1f0ae35588", async() => {
+                    WriteLiteral("Name");
+                }
+                );
+                __ExampleWebApp_TagHelpers_CellTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.CellTagHelper>();
+                __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_CellTagHelper);
+                await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                if (!__tagHelperExecutionContext.Output.IsContentModified)
+                {
+                    await __tagHelperExecutionContext.SetOutputContentAsync();
+                }
+                Write(__tagHelperExecutionContext.Output);
+                __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("th", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "41172715194b0efca59feec8e13f4e719b1f0ae36518", async() => {
+                    WriteLiteral("Price");
+                }
+                );
+                __ExampleWebApp_TagHelpers_CellTagHelper = CreateTagHelper<global::ExampleWebApp.TagHelpers.CellTagHelper>();
+                __tagHelperExecutionContext.Add(__ExampleWebApp_TagHelpers_CellTagHelper);
+                await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                if (!__tagHelperExecutionContext.Output.IsContentModified)
+                {
+                    await __tagHelperExecutionContext.SetOutputContentAsync();
+                }
+                Write(__tagHelperExecutionContext.Output);
+                __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                WriteLiteral("</tr>\r\n            </thead>\r\n            <tbody>\r\n");
 #nullable restore
 #line 18 "C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\Views\Home\List.cshtml"
                  foreach (Product p in Model)
@@ -99,7 +119,7 @@ using ExampleWebApp.Components;
 #line hidden
 #nullable disable
                 WriteLiteral("                    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "41172715194b0efca59feec8e13f4e719b1f0ae35847", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "41172715194b0efca59feec8e13f4e719b1f0ae37837", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
