@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace ExampleWebApp.Controllers
 {
+    [AutoValidateAntiforgeryToken]
     public class FormController : Controller
     {
         private DataContext context;
@@ -29,8 +30,7 @@ namespace ExampleWebApp.Controllers
         [HttpPost]
         public IActionResult SubmitForm()
         {
-            foreach (string key in Request.Form.Keys
-                    .Where(k => !k.StartsWith("_")))
+            foreach (string key in Request.Form.Keys)
             {
                 TempData[key] = string.Join(", ", Request.Form[key]);
             }
