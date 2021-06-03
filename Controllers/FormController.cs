@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ExampleWebApp.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace ExampleWebApp.Controllers
 {
@@ -18,7 +20,10 @@ namespace ExampleWebApp.Controllers
 
         public async Task<IActionResult> Index(long id = 1)
         {
-            return View("Form", await context.Products.FindAsync(id));
+            ViewBag.Categories
+                = new SelectList(context.Categories, "CategoryId", "Name");
+            return View("Form", await context.Products.Include(p => p.Category)
+                .Include(p => p.Supplier).FirstAsync(p => p.ProductId == id));
         }
 
         [HttpPost]
