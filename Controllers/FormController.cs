@@ -29,10 +29,11 @@ namespace ExampleWebApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult SubmitForm(string name, decimal price)
+        public IActionResult SubmitForm([Bind("Name", "Category")] Product product)
         {
-            TempData["name param"] = name;
-            TempData["price param"] = price.ToString();
+            TempData["name"] = product.Name;
+            TempData["price"] = product.Price.ToString();
+            TempData["category name"] = product.Category.Name;
             return RedirectToAction(nameof(Results));
         }
 
