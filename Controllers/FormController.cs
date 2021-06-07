@@ -19,7 +19,7 @@ namespace ExampleWebApp.Controllers
             context = dbContext;
         }
 
-        public async Task<IActionResult> Index(long? id)
+        public async Task<IActionResult> Index([FromQuery] long? id)
         {
             ViewBag.Categories
                 = new SelectList(context.Categories, "CategoryId", "Name");
@@ -40,6 +40,18 @@ namespace ExampleWebApp.Controllers
         public IActionResult Results()
         {
             return View(TempData);
+        }
+
+        public string Header([FromHeader] string accept)
+        {
+            return $"Header: {accept}";
+        }
+
+        [HttpPost]
+        [IgnoreAntiforgeryToken]
+        public Product Body([FromBody] Product model)
+        {
+            return model;
         }
     }
 }
