@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using ExampleWebApp.Models;
 using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ExampleWebApp
 {
@@ -28,12 +29,14 @@ namespace ExampleWebApp
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddRazorPages().AddRazorRuntimeCompilation();
             services.AddSingleton<CitiesData>();
-            //services.AddTransient<ITagHelperComponent, TimeTagHelperComponent>();
-            //services.AddTransient<ITagHelperComponent, TableFooterTagHelperComponent>();
+
             services.Configure<AntiforgeryOptions>(opts =>
             {
                 opts.HeaderName = "X-XSRF-TOKEN";
             });
+
+            services.Configure<MvcOptions>(opts => opts.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(
+                value => "Please enter a value"));
         }
 
         public void Configure(IApplicationBuilder app, DataContext context,
