@@ -3,34 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using ExampleWebApp.Models;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
+using ExampleWebApp.Filters;
 
 namespace ExampleWebApp.Controllers
 {
+    [HttpsOnly]
     public class HomeController : Controller
     {
-        private DataContext context;
-
-        public HomeController(DataContext ctx)
+        public IActionResult Index()
         {
-            context = ctx;
+            return View("Message", "This is the Index action on the Home controller");
         }
 
-        public async Task<IActionResult> Index(long id = 1)
+        public IActionResult Secure()
         {
-            ViewBag.AveragePrice = await context.Products.AverageAsync(p => p.Price);
-            return View(await context.Products.FindAsync(id));
-        }
-
-        public IActionResult List()
-        {
-            return View(context.Products);
-        }
-
-        public IActionResult Html()
-        {
-            return View((object)"This is a <h3><i>string</i></h3>");
+            return View("Message", "This is the Secure action on the Home controller");
         }
     }
 }
