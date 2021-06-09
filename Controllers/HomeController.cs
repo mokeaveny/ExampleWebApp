@@ -36,5 +36,22 @@ namespace ExampleWebApp.Controllers
                 context.ActionArguments["message1"] = "New message";
             }
         }
+
+        [RangeException]
+        public ViewResult GenerateException(int? id)
+        {
+            if (id == null)
+            {
+                throw new ArgumentNullException(nameof(id));
+            }
+            else if (id > 10)
+            {
+                throw new ArgumentOutOfRangeException(nameof(id));
+            }
+            else
+            {
+                return View("Message", $"The values is {id}");
+            }
+        }
     }
 }
