@@ -387,3 +387,5 @@ C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\obj\Debu
 C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_Validation.cshtml.g.cs
 C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\obj\Debug\netcoreapp3.1\Razor\Pages\Message.cshtml.g.cs
 C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Message.cshtml.g.cs
+C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\ProductEditor.cshtml.g.cs

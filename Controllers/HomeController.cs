@@ -1,61 +1,58 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
-using ExampleWebApp.Filters;
-using Microsoft.AspNetCore.Mvc.Filters;
+using ExampleWebApp.Models;
 
 namespace ExampleWebApp.Controllers
 {
-    //[HttpsOnly]
-    [ResultDiagnostics]
-    //[GuidResponse]
-    [Message("This is the controller-scoped filter", Order = 10)]
+    [AutoValidateAntiforgeryToken]
     public class HomeController : Controller
     {
-        [Message("This is the first action-scoped filter", Order = 1)]
-        [Message("This is the second action-scoped filter", Order = -1)]
+        private DataContext context;
+
+        private IEnumerable<Category> Categories => context.Categories;
+        private IEnumerable<Supplier> Suppliers => context.Suppliers;
+
+        public HomeController(DataContext data)
+        {
+            context = data;
+        }
+
         public IActionResult Index()
         {
-            return View("Message", "This is the Index action on the Home controller");
+            return View(context.Products.Include
+                (p => p.Category).Include(p => p.Supplier));
         }
 
-        public IActionResult Secure()
+        public async Task<IActionResult> Details(long id)
         {
-            return View("Message", "This is the Secure action on the Home controller");
+            Product p = await context.Products.Include(p => p.Category).Include(p => p.Supplier)
+                .FirstOrDefaultAsync(p => p.ProductId == id);
+            ProductViewModel model = ViewModelFactory.Details(p);
+            return View("ProductEditor", model);
         }
 
-        //[ChangeArg]
-        public IActionResult Messages(string message1, string message2 = "None")
+        public IActionResult Create()
         {
-            return View("Message", $"{message1}, {message2}");
+            return View("ProductEditor",
+                ViewModelFactory.Create(new Product(), Categories, Suppliers));
         }
 
-        public override void OnActionExecuting(ActionExecutingContext context)
+        [HttpPost]
+        public async Task<IActionResult> Create([FromForm] Product product)
         {
-            if (context.ActionArguments.ContainsKey("message1"))
+            if (ModelState.IsValid)
             {
-                context.ActionArguments["message1"] = "New message";
+                product.ProductId = default;
+                product.Category = default;
+                product.Supplier = default;
+                context.Products.Add(product);
+                await context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
-        }
-
-        [RangeException]
-        public ViewResult GenerateException(int? id)
-        {
-            if (id == null)
-            {
-                throw new ArgumentNullException(nameof(id));
-            }
-            else if (id > 10)
-            {
-                throw new ArgumentOutOfRangeException(nameof(id));
-            }
-            else
-            {
-                return View("Message", $"The values is {id}");
-            }
+            return View("ProductEditor",
+                    ViewModelFactory.Create(product, Categories, Suppliers));
         }
     }
 }

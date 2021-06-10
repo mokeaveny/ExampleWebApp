@@ -40,11 +40,11 @@ namespace ExampleWebApp
                 value => "Please enter a value"));
 
             services.AddScoped<GuidResponseAttribute>();
-            services.Configure<MvcOptions>(opts =>
-            {
-                opts.Filters.Add<HttpsOnlyAttribute>();
-                opts.Filters.Add(new MessageAttribute("This is the globally-scoped filter"));
-            });
+            //services.Configure<MvcOptions>(opts =>
+            //{
+            //    opts.Filters.Add<HttpsOnlyAttribute>();
+            //    opts.Filters.Add(new MessageAttribute("This is the globally-scoped filter"));
+            //});
         }
 
         public void Configure(IApplicationBuilder app, DataContext context,
