@@ -12,7 +12,10 @@
 
         public void OnGet()
         {
-            ViewModel = ViewModelFactory.Create(new Product(),
+            Product p = TempData.ContainsKey("product")
+                ? JsonSerializer.Deserialize<Product>(TempData["product"] as string)
+                : new Product();
+            ViewModel = ViewModelFactory.Create(p,
                 Categories, Suppliers);
         }
 

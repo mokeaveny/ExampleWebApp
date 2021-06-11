@@ -396,3 +396,4 @@ C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\obj\Debu
 C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\obj\Debug\netcoreapp3.1\Razor\Pages\Index.cshtml.g.cs
 C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\obj\Debug\netcoreapp3.1\Razor\Pages\_CategoryEditor.cshtml.g.cs
 C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\obj\Debug\netcoreapp3.1\Razor\Pages\_ProductEditor.cshtml.g.cs
+C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\obj\Debug\netcoreapp3.1\Razor\Pages\SupplierBreakOut.cshtml.g.cs
