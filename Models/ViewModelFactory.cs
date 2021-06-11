@@ -31,5 +31,29 @@ namespace ExampleWebApp.Models
                 Suppliers = suppliers
             };
         }
+
+        public static ProductViewModel Edit(Product product,
+            IEnumerable<Category> categories, IEnumerable<Supplier> suppliers)
+        {
+            return new ProductViewModel
+            {
+                Product = product, Categories = categories, Suppliers = suppliers,
+                Theme = "warning", Action = "Edit"
+            };
+        }
+
+        public static ProductViewModel Delete(Product p,
+            IEnumerable<Category> categories, IEnumerable<Supplier> suppliers)
+        {
+            return new ProductViewModel
+            {
+                Product = p,
+                Action = "Delete",
+                ReadOnly = true,
+                Theme = "danger",
+                Categories = categories,
+                Suppliers = suppliers
+            };
+        }
     }
 }

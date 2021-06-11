@@ -19,6 +19,27 @@ using ExampleWebApp.Models;
 #line hidden
 #nullable disable
 #nullable restore
+#line 6 "C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\Pages\_ViewImports.cshtml"
+using Microsoft.EntityFrameworkCore;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 7 "C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\Pages\_ViewImports.cshtml"
+using ExampleWebApp.Pages;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 8 "C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\Pages\_ViewImports.cshtml"
+using System.Text.Json;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 3 "C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\Pages\Message.cshtml"
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -55,7 +76,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorCompiledItemMetadataAttribute("RouteTemplate", "/pages/message")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4b004c955f60dc04f303f08a9bbe5c6783c5c34b", @"/Pages/Message.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c99a9098832cd4193a2678bdd569b861948b350a", @"/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6af6b3105fa9579d30a1b4ce60deaab882704b23", @"/Pages/_ViewImports.cshtml")]
     public class Pages_Message : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("table table-sm table-striped table-bordered"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -112,9 +133,9 @@ else if (Model.Message is IDictionary<string, string>)
 #line hidden
 #nullable disable
             WriteLiteral("    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("table", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4b004c955f60dc04f303f08a9bbe5c6783c5c34b5288", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("table", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4b004c955f60dc04f303f08a9bbe5c6783c5c34b5913", async() => {
                 WriteLiteral("\r\n        <thead><tr>");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("th", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4b004c955f60dc04f303f08a9bbe5c6783c5c34b5566", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("th", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4b004c955f60dc04f303f08a9bbe5c6783c5c34b6191", async() => {
                     WriteLiteral("Name");
                 }
                 );
@@ -127,7 +148,7 @@ else if (Model.Message is IDictionary<string, string>)
                 }
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("th", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4b004c955f60dc04f303f08a9bbe5c6783c5c34b6496", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("th", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4b004c955f60dc04f303f08a9bbe5c6783c5c34b7121", async() => {
                     WriteLiteral("Value");
                 }
                 );
@@ -150,7 +171,7 @@ else if (Model.Message is IDictionary<string, string>)
 #line hidden
 #nullable disable
                 WriteLiteral("                <tr>");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("td", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4b004c955f60dc04f303f08a9bbe5c6783c5c34b7782", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("td", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4b004c955f60dc04f303f08a9bbe5c6783c5c34b8407", async() => {
 #nullable restore
 #line 20 "C:\Users\micha\Desktop\Web Development\Pro ASP.NET Core 3\ExampleWebApp\Pages\Message.cshtml"
                    Write(kvp.Key);

@@ -54,5 +54,42 @@ namespace ExampleWebApp.Controllers
             return View("ProductEditor",
                     ViewModelFactory.Create(product, Categories, Suppliers));
         }
+
+        public async Task<IActionResult> Edit(long id)
+        {
+            Product p = await context.Products.FindAsync(id);
+            ProductViewModel model = ViewModelFactory.Edit(p, Categories, Suppliers);
+            return View("ProductEditor", model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit([FromForm]Product product)
+        {
+            if (ModelState.IsValid)
+            {
+                product.Category = default;
+                product.Supplier = default;
+                context.Products.Update(product);
+                await context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View("ProductEditor",
+                ViewModelFactory.Edit(product, Categories, Suppliers));
+        }
+
+        public async Task<IActionResult> Delete(long id)
+        {
+            ProductViewModel model = ViewModelFactory.Delete(
+                await context.Products.FindAsync(id), Categories, Suppliers);
+            return View("ProductEditor", model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(Product product)
+        {
+            context.Products.Remove(product);
+            await context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
